@@ -6,7 +6,7 @@ deodex工具(6592适用)
 
 1.获取你要合并的ROM的/system/app和/system/framework目录，复制到工具箱/system目录下
 
-2.双击deodex.bat 
+2.双击start.bat 
 
 3.你可以选择合并app目录，framework目录或者两个目录都合并
 
