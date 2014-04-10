@@ -22,7 +22,7 @@ echo I                                                       I
 echo I                   made by suda                        I
 echo +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 echo --------------------------------------------------------
-echo 当API为%api_level%，smali版本为%smali_version%
+echo 当前API为%api_level%，smali版本为%smali_version%
 echo 如需修改,请至tools文件夹修改api_level.txt和use_this_version.txt
 echo --------------------------------------------------------
 echo.  [选择序号进行操作]
