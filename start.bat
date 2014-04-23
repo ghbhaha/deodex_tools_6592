@@ -22,7 +22,7 @@ echo I                                                       I
 echo I                   made by suda                        I
 echo +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 echo --------------------------------------------------------
-echo 当前API为%api_level%，smali版本为%smali_version%
+echo 当API为%api_level%，smali版本为%smali_version%
 echo 如需修改,请至tools文件夹修改api_level.txt和use_this_version.txt
 echo --------------------------------------------------------
 echo.  [选择序号进行操作]
@@ -58,6 +58,7 @@ if not exist system\framework ( echo.
 echo 没有发现framework目录，即将返回主单
 ping 127.0.0.1 -n 2 >NUL
 goto menu )
+if not exist log.txt( del log.txt )
 echo 创建Android框架备份....
 if exist system\temp_framework ( rd /q /s system\temp_framework ) 
 mkdir system\temp_framework\
@@ -96,6 +97,7 @@ if not exist system\app ( echo.
 echo 没有发现app目录，即将返回主单
 ping 127.0.0.1 -n 2 >NUL
 goto menu )
+if not exist log.txt( del log.txt )
 echo 创建Android框架备份....
 if exist system\temp_framework ( rd /q /s system\temp_framework ) 
 mkdir system\temp_framework\
@@ -123,6 +125,7 @@ if not exist system\framework ( echo.
 echo 没有发现framework目录，即将返回主单
 ping 127.0.0.1 -n 2 >NUL 
 goto menu )
+if not exist log.txt( del log.txt )
 echo 创建Android框架备份....
 if exist system\temp_framework ( rd /q /s system\temp_framework ) 
 mkdir system\temp_framework\
@@ -150,6 +153,9 @@ cd system
 echo     正在将 %~n1.odex 转化为 classes.dex ...
 java -Xmx512M -jar ..\tools\baksmali-%smali_version%.jar -a %api_level% -T ..\tools\fix_error -d temp_framework -x %1
 java -Xmx512M -jar ..\tools\smali-%smali_version%.jar out -a %api_level% -o  app\classes.dex
+if not exist app\classes.dex ( echo %~n1.apk合并失败
+for %%a in (..\log.txt) do echo %~n1.apk合并失败 >>%%a
+goto end )
 del %1 /Q
 rd out /Q /S
 echo     正在将 %~n1.apk 与 classes.dex 合并...
@@ -160,6 +166,7 @@ cd ..\..\
 echo.
 echo     ---- %~n1.apk合并成功 ----
 echo.
+for %%a in (.\log.txt) do echo %~n1.jar合并成功 >>%%a
 goto end
 
 
@@ -167,8 +174,11 @@ rem 合并framework部分
 :deodex_framework
 cd system
 echo     正在将 %~n1.odex 转化为 classes.dex ...
-java -Xmx512M -jar ..\tools\baksmali-%smali_version%.jar -a %api_level% -T ..\tools\fix_error -d temp_framework -x %1
+java -Xmx512M -jar ..\tools\baksmali-%smali_version%.jar -a %api_level% -T ..\tools\fix_error -d temp_framework -x %1 
 java -Xmx512M -jar ..\tools\smali-%smali_version%.jar out -a %api_level% -o framework\classes.dex
+if not exist framework\classes.dex ( echo %~n1.jar合并失败
+for %%a in (..\log.txt) do echo %~n1.jar合并失败 >>%%a
+goto end ) 
 del %1 /Q
 rd out /Q /S
 echo     正在将 %~n1.jar 与 classes.dex 合并...
@@ -177,8 +187,9 @@ zip %~n1.jar -u classes.dex>nul
 del classes.dex /Q
 cd ..\..\
 echo.
-echo     ---- %~n1.jar合并成功 ----
+echo     ---- %~n1.jar合并成功 ---- 
 echo.
+for %%a in (.\log.txt) do echo %~n1.jar合并成功 >>%%a
 goto end
 
 :end
