@@ -1,32 +1,31 @@
-¸üÐÂ£º
+æ›´æ–°ï¼š
 
 2014.4.23
 
-1.Ôö¼ÓlogÊä³ö£¬·½±ã²éÕÒ³ö´íÎÄ¼þ
+1.å¢žåŠ logè¾“å‡ºï¼Œæ–¹ä¾¿æŸ¥æ‰¾å‡ºé”™æ–‡ä»¶
 
-2.Èô¸ÃodexºÏ²¢²»³É¹¦£¬ÔòÌø¹ý£¬²»É¾³ý¸Ãodex
+2.è‹¥è¯¥odexåˆå¹¶ä¸æˆåŠŸï¼Œåˆ™è·³è¿‡ï¼Œä¸åˆ é™¤è¯¥odex
 
+è¯´æ˜Ž
 
-ËµÃ÷
+deodexå·¥å…·(6592é€‚ç”¨)
 
-deodex¹¤¾ß(6592ÊÊÓÃ) 
+ä½¿ç”¨æ–¹æ³•ä»‹ç»
 
-Ê¹ÓÃ·½·¨½éÉÜ
+1.èŽ·å–ä½ è¦åˆå¹¶çš„ROMçš„/system/appå’Œ/system/frameworkç›®å½•ï¼Œå¤åˆ¶åˆ°å·¥å…·ç®±/systemç›®å½•ä¸‹
 
-1.»ñÈ¡ÄãÒªºÏ²¢µÄROMµÄ/system/appºÍ/system/frameworkÄ¿Â¼£¬¸´ÖÆµ½¹¤¾ßÏä/systemÄ¿Â¼ÏÂ
+2.åŒå‡»start.bat
 
-2.Ë«»÷start.bat 
+3.ä½ å¯ä»¥é€‰æ‹©åˆå¹¶appç›®å½•ï¼Œframeworkç›®å½•æˆ–è€…ä¸¤ä¸ªç›®å½•éƒ½åˆå¹¶
 
-3.Äã¿ÉÒÔÑ¡ÔñºÏ²¢appÄ¿Â¼£¬frameworkÄ¿Â¼»òÕßÁ½¸öÄ¿Â¼¶¼ºÏ²¢
+3.è‹¥æ­£å¸¸å¼€æœºåˆ™deodexå®Œæˆ
 
-3.ÈôÕý³£¿ª»úÔòdeodexÍê³É
+åˆå¹¶è¿‡ç¨‹ä¸­æŠ¥é”™æˆ–è€…åˆå¹¶åŽä¸èƒ½å¼€æœº
 
-ºÏ²¢¹ý³ÌÖÐ±¨´í»òÕßºÏ²¢ºó²»ÄÜ¿ª»ú
+æ–¹æ¡ˆä¸€ï¼šä¿®æ”¹tools/use_this_version.txt ä¸­çš„ç‰ˆæœ¬å·
 
-·½°¸Ò»£ºÐÞ¸Ätools/use_this_version.txt ÖÐµÄ°æ±¾ºÅ
+æ–¹æ¡ˆäºŒï¼šè¿žæŽ¥æ‰‹æœºï¼Œè¿è¡Œfix_error.bat æå–èŽ·å–ä½ çš„ROMçš„fix_erroræ–‡ä»¶æ‹·è´è‡³toolsæ–‡ä»¶å¤¹
 
-·½°¸¶þ£ºÁ¬½ÓÊÖ»ú£¬ÔËÐÐfix_error.bat ÌáÈ¡»ñÈ¡ÄãµÄROMµÄfix_errorÎÄ¼þ¿½±´ÖÁtoolsÎÄ¼þ¼Ð
+æ„Ÿè°¢wuxianlin çš„6592åˆå¹¶å·¥å…·å¼€æºé¡¹ç›® https://github.com/wuxianlin/deodex_tools/tree/mt6592
 
-¸ÐÐ»wuxianlin µÄ6592ºÏ²¢¹¤¾ß¿ªÔ´ÏîÄ¿ https://github.com/wuxianlin/deodex_tools/tree/mt6592 
-
-¸ÐÐ»smali¿ªÔ´ÏîÄ¿ google code github
+æ„Ÿè°¢smaliå¼€æºé¡¹ç›® google code github
