@@ -58,7 +58,8 @@ if not exist system\framework ( echo.
 echo 没有发现framework目录，即将返回主单
 ping 127.0.0.1 -n 2 >NUL
 goto menu )
-if exist log.txt( del log.txt )
+if exist log.txt( echo.
+del log.txt )
 echo 创建Android框架备份....
 if exist system\temp_framework ( rd /q /s system\temp_framework ) 
 mkdir system\temp_framework\
@@ -97,7 +98,8 @@ if not exist system\app ( echo.
 echo 没有发现app目录，即将返回主单
 ping 127.0.0.1 -n 2 >NUL
 goto menu )
-if exist log.txt( del log.txt )
+if exist log.txt( echo.
+del log.txt )
 echo 创建Android框架备份....
 if exist system\temp_framework ( rd /q /s system\temp_framework ) 
 mkdir system\temp_framework\
@@ -125,7 +127,8 @@ if not exist system\framework ( echo.
 echo 没有发现framework目录，即将返回主单
 ping 127.0.0.1 -n 2 >NUL 
 goto menu )
-if exist log.txt( del log.txt )
+if exist log.txt( echo.
+del log.txt )
 echo 创建Android框架备份....
 if exist system\temp_framework ( rd /q /s system\temp_framework ) 
 mkdir system\temp_framework\
